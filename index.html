@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ode to Majesty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      overflow-y: auto;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid goldenrod;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header img {
+      width: 65px;
+      height: 68px;
+      border-radius: 30%;
+    }
+
+    header h1 {
+      color: goldenrod;
+      font-size: 2.5rem;
+      margin-left: 20px;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .section-wrapper {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .circle-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .circle-image {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid goldenrod;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .circle-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px goldenrod;
+    }
+
+    .circle-image img {
+      width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid goldenrod;
+  object-fit: cover;
+    }
+
+
+    .final-note {
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto 80px;
+      padding: 20px;
+      background-color: #111;
+      border: 1px solid #444;
+      border-radius: 10px;
+      color: #ccc;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Snowflake style */
+    .snowflake {
+      position: fixed;
+      top: -20px;
+      color: white;
+      font-size: 14px;
+      pointer-events: none;
+      opacity: 0.8;
+      animation: fall linear forwards;
+      text-shadow: 0 0 5px white, 0 0 10px lightblue;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .circle-image {
+        width: 90px;
+        height: 90px;
+      }
+
+      .section-wrapper {
+        gap: 30px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .video-section iframe {
+        height: 250px;
+      }
+
+      .final-note {
+        font-size: 1rem;
+      }
+    }
+
+    .circle-desc {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: goldenrod;
+  font-weight: bold;
+  text-align: center;
+}
+
+.short-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px; /* Optional: Limit width */
+    margin: auto;
+    padding-top: 177.77%; /* 9:16 Aspect Ratio */
+  }
+
+  .short-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  
+  h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .final-note {
+      background-color: #300000;
+      padding: 25px;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .final-note p {
+      font-size: 1.05rem;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .final-note h3 {
+      font-size: 1.4rem;
+      color: #ffffff;
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .final-note h4 {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .final-note h5 {
+      font-size: 1rem;
+      color: #fff700;
+      text-align: center;
+      margin-top: 30px;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+
+      .final-note {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <img src="icon-2.jpeg" alt="Logo" />
+    <h1>Ode to Majesty</h1>
+  </header>
+
+  <section class="section-wrapper">
+    <div class="circle-group">
+      <div class="circle-container">
+        <a href="https://rococo-bombolone-18d368.netlify.app/" class="circle-image">
+          <img src="storycover.jpg" alt="Story" />
+        </a>
+        <p class="circle-desc">Story</p>
+      </div>
+    
+      <div class="circle-container">
+        <a href=" https://webhostersm.github.io/Majestify369/" class="circle-image">
+          <img src="majestify.webp" alt="Majestify" />
+        </a>
+        <p class="circle-desc">Majestify</p>
+      </div>
+    
+      <div class="circle-container">
+        <a href=" https://66dca67e14f94424142d9963--rainbow-peony-c0e2fa.netlify.app/" class="circle-image">
+          <img src="images-section.webp" alt="Gallery" />
+        </a>
+        <p class="circle-desc">Gallery</p>
+      </div>
+    
+      <div class="circle-container">
+        <a href="https://drive.google.com/drive/folders/1KN3o9jZaJdAUMifbfxdusKyCPZzY0phq?usp=sharing" class="circle-image">
+          <img src="video-section.avif" alt="Video" />
+        </a>
+        <p class="circle-desc">Videos</p>
+      </div>
+    
+      <div class="circle-container">
+        <a href="https://regal-malasada-3016ea.netlify.app/" class="circle-image">
+          <img src="extra.png" alt="Extra" />
+        </a>
+        <p class="circle-desc">Extra's</p>
+      </div>
+    </div>
+    
+  </section>
+
+
+  <h2>My Last Message🤍</h2>
+  <div class="short-video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/q7furWXnQjw" 
+      title="YouTube Short"
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  <br>
+
+  <h2>Happiest Birthday 🍻</h2>
+  <div class="final-note">
+    <p>Happiest Birthday Ananya , Thanks for all your time every single piece of memory , You means a tonn to me even in past , even in present , even in future. I just stopped disturbing you when i came to know what you really feel about me and I am tired to proof myself right always I am not that bad to be treated like this. But its fine 🍂</p>
+    <p>I never made you my friend just for any hope of getting something from you , name it anything. Bacho ki tarah , I TO CARED 🤍 become 60 year old and you will be still that sweet little girl for me in DPS Uniform 💚</p>
+    <p>Life is tough and unpredictable , please take the best care of yourself, even if no one is around 🦋</p>
+    <h3>May you get the best out of this life ❤️🧿</h3>
+    <h4>I never hated you , You are PRECIOUS AND WORTHY of everything in life , Dhyan rakhna apna , Happiest Birthday Again 🎂</h4>
+    <h5>In life if you ever need some help or company will be there and this is the least I did from myside , Lots of blessings to you. 🌻</h5>
+  </div>
+
+  <script>
+    function createSnowflake() {
+      const snow = document.createElement('div');
+      snow.className = 'snowflake';
+      snow.textContent = '❄';
+      const size = Math.random() * 12 + 8;
+      const duration = Math.random() * 5 + 5;
+      const left = Math.random() * window.innerWidth;
+
+      snow.style.left = `${left}px`;
+      snow.style.fontSize = `${size}px`;
+      snow.style.opacity = Math.random() * 0.6 + 0.4;
+      snow.style.animationDuration = `${duration}s`;
+
+      document.body.appendChild(snow);
+
+      setTimeout(() => snow.remove(), duration * 1000);
+    }
+
+    setInterval(() => {
+      if (Math.random() < 0.5) {
+        createSnowflake();
+      }
+    }, 300);
+  </script>
+</body>
+</html>
